@@ -13,8 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TEQVAULT | Web development bootcamp",
+  title: "TEQVAULT | Tech mentorship  bootcamp",
   description: "Build your future in eight focused weeks with TEQVAULT.",
+  metadataBase: new URL("https://learn.teqvault.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "TEQVAULT |  Learn a tech skill",
+    description: "Build your future  with TEQVAULT.",
+    url: "https://learn.teqvault.app/",
+    siteName: "TEQVAULT Academy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "TEQVAULT | Build your tech career",
+    description: "Build your future  with TEQVAULT .",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
