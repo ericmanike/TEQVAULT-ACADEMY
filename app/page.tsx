@@ -16,7 +16,7 @@ export default function Home() {
           <span className="brand-name">TEQVAULT<span className="brand-dot">.</span></span>
           <span className="brand-academy">ACADEMY</span>
         </a>
-        <a className="button-dark p-3 " href="#apply">APPLY FOR THE NEXT COHORT </a>
+        <a className="button-dark p-2 md:p-3  text-center max-md:text-[10px]" href="#apply">APPLY NOW </a>
       </nav>
 
       <section className="hero max-md:p-0 max-md:text-2xl">
