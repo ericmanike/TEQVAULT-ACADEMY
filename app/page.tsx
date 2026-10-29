@@ -20,10 +20,10 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow"><span className="eyebrow-line" /> WEB DEVELOPMENT BOOTCAMP</p>
-          <h1>Make the web.<br /><em>Make your mark.</em></h1>
+                                           <p className="eyebrow"><span className="eyebrow-line" /> START YOUR TECH JOURNEY</p>
+                                  <h1>Code your future.<br /><em>one line at a time.</em></h1>
           <p className="hero-lede">
-            An eight-week, hands-on journey from curious beginner to confident builder. No
+            An 3 to 7-week, hands-on journey from curious beginner to confident builder. No
             fluff. Just the skills, support, and momentum to start your next chapter.
           </p>
           <a className="button button-dark" href="#apply">Start your application <span aria-hidden="true">↓</span></a>
@@ -65,7 +65,17 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="brand" href="#">TEQVAULT<span className="brand-dot">.</span></a>
+        <div className="footer-left">
+          <a className="brand" href="#">TEQVAULT<span className="brand-dot">.</span></a>
+          <a
+            className="community-button"
+            href="https://whatsapp.com/channel/0029VbBcIbS7T8beipl8aZ1x"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join the community <span aria-hidden="true">↗</span>
+          </a>
+        </div>
         <p>Build boldly. Stay curious.</p>
         <span>© 2026 TEQVAULT</span>
       </footer>
