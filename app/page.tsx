@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ApplicationForm from "@/components/ApplicationForm";
+import { ArrowBigDown, Send } from "lucide-react";
 
 const outcomes = [
   ["01", "Learn by building", "Ship real projects with a small, supportive cohort."],
@@ -15,18 +16,17 @@ export default function Home() {
           <span className="brand-name">TEQVAULT<span className="brand-dot">.</span></span>
           <span className="brand-academy">ACADEMY</span>
         </a>
-        <a className="nav-link" href="#apply">Apply for the next cohort <span aria-hidden="true">↗</span></a>
+        <a className="button-dark p-3 " href="#apply">APPLY FOR THE NEXT COHORT </a>
       </nav>
 
-      <section className="hero">
+      <section className="hero max-md:p-0 max-md:text-2xl">
         <div className="hero-copy">
-                                           <p className="eyebrow"><span className="eyebrow-line" /> START YOUR TECH JOURNEY</p>
-                                  <h1>Code your future.<br /><em>one line at a time.</em></h1>
+         <p className="eyebrow"><span className="eyebrow-line" /> START YOUR TECH JOURNEY</p>
+         <h1 className=" text-1xl md:text-3xl">Code your future.<br /><em>one line at a time.</em></h1>
           <p className="hero-lede">
-            An 3 to 7-week, hands-on journey from curious beginner to confident builder. No
-            fluff. Just the skills, support, and momentum to start your next chapter.
+            An 3 to 7-week, hands-on journey from curious beginner to confident builder. Just the skills, support, and momentum to start your next chapter.
           </p>
-          <a className="button button-dark" href="#apply">Start your application <span aria-hidden="true">↓</span></a>
+          <a className="button button-dark" href="#apply">Start your application <ArrowBigDown/></a>
           <p className="hero-note">Next cohort starts Soon <span>·</span> 10 seats</p>
         </div>
         <div className="hero-art">
@@ -57,7 +57,7 @@ export default function Home() {
       <section className="application-section" id="apply">
         <div className="application-intro">
           <p className="eyebrow"><span className="eyebrow-line" /> YOUR NEXT CHAPTER</p>
-          <h2>Ready to level up?<br /><em>Let&apos;s get started.</em></h2>
+          <h2>Ready to level up? <br /><em>apply here</em></h2>
           <p>Turn your curiosity into a career.</p>
           <div className="application-meta"><span>⟡</span> Applications are currently open</div>
         </div>
@@ -66,14 +66,18 @@ export default function Home() {
 
       <footer>
         <div className="footer-left">
-          <a className="brand" href="#">TEQVAULT<span className="brand-dot">.</span></a>
+                  <a className="brand" href="#" aria-label="TEQVAULT Academy home">
+          <span className="brand-name">TEQVAULT<span className="brand-dot">.</span></span>
+          <span className="brand-academy">ACADEMY</span>
+        </a>
+   
           <a
             className="community-button"
             href="https://whatsapp.com/channel/0029VbBcIbS7T8beipl8aZ1x"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Join the community <span aria-hidden="true">↗</span>
+            Join the community <Send />
           </a>
         </div>
         <p>Build boldly. Stay curious.</p>

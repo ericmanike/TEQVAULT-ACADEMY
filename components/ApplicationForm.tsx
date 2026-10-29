@@ -3,6 +3,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
+import { Send } from "lucide-react";
 
 const applicationSchema = Yup.object({
   name: Yup.string().trim().min(2, "Please enter your full name").required("Your name is required"),
@@ -105,7 +106,7 @@ export default function ApplicationForm() {
           <label>WHY DO YOU WANT TO ENROLL INTO THIS PROGRAM? <Field as="textarea" name="motivation" rows={4} placeholder="Tell us why you want to enroll..." /> <ErrorMessage name="motivation" component="span" /></label>
           {status && <p className="form-status" role="alert">{status}</p>}
           <button className="button button-accent submit-button" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Sending application..." : "Submit application"} <span aria-hidden="true">↗</span>
+            {isSubmitting ? "Sending application..." : "Submit application"}  <Send />
           </button>
           <p className="privacy-note">By applying, you agree to hear from TEQVAULT about this program.</p>
         </Form>
