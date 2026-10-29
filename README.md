@@ -1,5 +1,17 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Application email setup
+
+The application form sends submissions through Resend. Create a `.env.local` file with:
+
+```env
+RESEND_API_KEY=re_...
+RESEND_FROM_EMAIL=TEQVAULT <applications@your-verified-domain.com>
+APPLICATION_RECIPIENT_EMAIL=you@example.com
+```
+
+Verify the sender domain in Resend before using a custom address. Without these values, the API returns an explicit configuration error rather than accepting an application that cannot be delivered.
+
 ## Getting Started
 
 First, run the development server:
