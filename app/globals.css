@@ -79,7 +79,9 @@ footer p { margin: 0; }
 
 @media (max-width: 800px) {
   .site-nav { padding-right: 6vw; padding-left: 6vw; }
-  .hero { display: block; min-height: auto; padding: 55px 6vw 75px; }
+  .hero { display: block; min-height: auto; padding: 55px 6vw 75px; text-align: center; }
+  .hero-copy { display: flex; flex-direction: column; align-items: center; }
+  .hero-lede { margin-right: auto; margin-left: auto; }
   .hero-art { min-height: min(105vw, 560px); margin: 55px 0 0; }
   .outcomes { margin: 0 5vw; padding: 65px 0; }
   .outcome-grid, .application-section { grid-template-columns: 1fr; }
@@ -99,7 +101,7 @@ footer p { margin: 0; }
   h1 { margin-bottom: 24px; font-size: clamp(48px, 15vw, 70px); }
   .hero-lede { font-size: 15px; }
   .button { width: 100%; gap: 16px; }
-  .hero-note { line-height: 1.5; }
+  .hero-note { line-height: 1.5; text-align: center; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .hero-art { min-height: 125vw; margin-top: 45px; }
   .application-section { padding: 65px 6vw; }

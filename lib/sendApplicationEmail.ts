@@ -19,24 +19,44 @@ export async function sendApplicationEmail(application: Application) {
   }
 
   const resend = new Resend(apiKey);
-  const { error } = await resend.emails.send({
-    from: sender,
-    to: recipient,
-    replyTo: application.email,
-    subject: `New TEQVAULT application from ${application.name}`,
-    text: [
-      `Name: ${application.name}`,
-      `Email: ${application.email}`,
-      `Phone: ${application.phone}`,
-      `University program: ${application.universityProgram}`,
-      `Track: ${application.track}`,
-      `Experience: ${application.experience}`,
-      "",
-      "Why they want to enroll:",
-      application.motivation,
-    ].join("\n"),
-  });
-  if (error) {
-    throw new Error(`Resend rejected the application email: ${error.message}`);
+  const [adminEmail, applicantEmail] = await Promise.all([
+    resend.emails.send({
+      from: sender,
+      to: recipient,
+      replyTo: application.email,
+      subject: `New TEQVAULT application from ${application.name}`,
+      text: [
+        `Name: ${application.name}`,
+        `Email: ${application.email}`,
+        `Phone: ${application.phone}`,
+        `University program: ${application.universityProgram}`,
+        `Track: ${application.track}`,
+        `Experience: ${application.experience}`,
+        "",
+        "Why they want to enroll:",
+        application.motivation,
+      ].join("\n"),
+    }),
+    resend.emails.send({
+      from: sender,
+      to: application.email,
+      subject: "We received your TEQVAULT application",
+      text: [
+        `Hi ${application.name},`,
+        "",
+        "Thanks for applying to the TEQVAULT Website Development program.",
+        "Your application has been submitted successfully. Our team will review it and get back to you with the next steps.",
+        "",
+        "Best,",
+        "The TEQVAULT Team",
+      ].join("\n"),
+    }),
+  ]);
+
+  if (adminEmail.error) {
+    throw new Error(`Resend rejected the notification email: ${adminEmail.error.message}`);
+  }
+  if (applicantEmail.error) {
+    throw new Error(`Resend rejected the confirmation email: ${applicantEmail.error.message}`);
   }
 }
