@@ -24,7 +24,7 @@ export default function Home() {
          <p className="eyebrow"><span className="eyebrow-line" /> START YOUR TECH JOURNEY</p>
          <h1 className=" text-1xl md:text-3xl">Code your future.<br /><em>one line at a time.</em></h1>
           <p className="hero-lede">
-            An 3 to 7-week, hands-on journey from curious beginner to confident builder. Just the skills, support, and momentum to start your next chapter.
+            A 3 to 7-week, hands-on journey from curious beginner to confident builder. Just the skills, support, and momentum to start your next chapter.
           </p>
           <a className="button button-dark" href="#apply">Start your application <ArrowBigDown/></a>
           <p className="hero-note">Next cohort starts Soon <span>·</span> 10 seats</p>
